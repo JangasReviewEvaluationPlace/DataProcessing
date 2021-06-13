@@ -1,8 +1,10 @@
 from consumer import KafkaConsumer
+from nlp import fake_nlp
 
 
 def processing(message):
-    print(message.value())
+    feedback_type = fake_nlp(message.value())
+    print(message.value(), feedback_type)
 
 
 def main():
