@@ -8,3 +8,12 @@ KAFKA_SCHEMA_REGISTRY_URL = os.getenv("KAFKA_SCHEMA_REGISTRY_URL", "http://local
 KAFKA_CONSUMER_GROUP_ID = os.getenv("KAFKA_CONSUMER_GROUP_ID", "pythonprocessing")
 KAFKA_AUTO_OFFSET_RESET = os.getenv("KAFKA_AUTO_OFFSET_RESET", "latest")
 TWITTER_TOPIC = os.getenv("TWITTER_TOPIC", "twitter-etl")
+
+
+POSTGRES_CONFIGS = {
+    "host": os.getenv("POSTGRES_HOST", "localhost"),
+    "port": os.getenv("POSTGRES_PORT", "5432"),
+    "user": os.getenv("POSTGRES_USER", "postgres"),
+    "password": os.getenv("POSTGRES_PASSSWORD", "postgres"),
+    "database": os.getenv("POSTGRES_DATABASE", "tweet"),
+}

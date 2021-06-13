@@ -10,6 +10,7 @@ python-dotenv = "^0.17.1"
 confluent-kafka = "^1.7.0"
 requests = "^2.25.1"
 avro = "^1.10.2"
+psycopg2-binary = "^2.8.6"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^3.9.2"
