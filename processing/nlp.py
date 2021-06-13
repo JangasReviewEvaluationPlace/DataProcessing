@@ -1,4 +1,5 @@
 from random import choice
+from langdetect import detect
 
 
 def fake_nlp(text: str) -> str:
@@ -11,4 +12,4 @@ def fake_nlp(text: str) -> str:
 
 
 def language_detection(text: str) -> str:
-    return "en"
+    return detect(text)
