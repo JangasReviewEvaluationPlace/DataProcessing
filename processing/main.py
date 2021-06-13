@@ -6,7 +6,7 @@ from models import Tweet, TweetManager
 
 def processing(message):
     value = message.value()
-    language = language_detection(text=value["text"])
+    language = language_detection(text=value["Text"])
     if language != "en":
         return
 
