@@ -1,6 +1,5 @@
 from dataclasses import dataclass
 from datetime import datetime
-from psycopg2 import
 
 
 @dataclass
@@ -13,7 +12,8 @@ class Tweet:
 
 
 class TweetManager:
-    def insert_tweet(self, cursor: "psycopg2.cursor", tweet: Tweet):
+    @classmethod
+    def insert_tweet(cls, cursor: "psycopg2.cursor", tweet: Tweet):
         statement = """
             INSERT INTO tweet (id, created_at, text, feedback_type, language)
             VALUES (%s, %s, %s, %s, %s);
